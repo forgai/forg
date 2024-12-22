@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  py38:
+    container_name: forg-py38
+    build:
+      dockerfile: Dockerfile
+      target: py38
+    volumes:
+      - .:/repository/
+    environment:
+      - FORG_API_KEY=
+      - FORG_API_BASE=
+
+  py39:
+    container_name: forg-py39
+    build:
+      dockerfile: Dockerfile
+      target: py39
+    volumes:
+      - .:/repository/
+    environment:
+      - FORG_API_KEY=
+      - FORG_API_BASE=
+
+  py310:
+    container_name: forg-py310
+    build:
+      dockerfile: Dockerfile
+      target: py310
+    volumes:
+      - .:/repository/
+    environment:
+      - FORG_API_KEY=
+      - FORG_API_BASE=
+
+  py311:
+    container_name: forg-py311
+    build:
+      dockerfile: Dockerfile
+      target: py311
+    volumes:
+      - .:/repository/
+    environment:
+      - FORG_API_KEY=
+      - FORG_API_BASE=
+
+  py312:
+    container_name: forg-py312
+    build:
+      dockerfile: Dockerfile
+      target: py312
+    volumes:
+      - .:/repository/
+    environment:
+      - FORG_API_KEY=
+      - FORG_API_BASE=

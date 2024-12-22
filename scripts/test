@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Before executing this script, make sure docker compose is running. Before running
+# docker compose, set FORG_API_KEY and FORG_API_BASE for each container.
+
+# If you want to run these in parallel, set a different FORG_API_KEY for each
+# container so that the tests can run in parallel without interfering with each other
+# (each api key must belong to a different user). In this case, just copy and paste
+# the following commands into separate terminals, instead of running this script.
+
+docker exec forg-py38 pytest -s -x tests
+docker exec forg-py39 pytest -s -x tests
+docker exec forg-py310 pytest -s -x tests
+docker exec forg-py311 pytest -s -x tests
+docker exec forg-py312 pytest -s -x tests
